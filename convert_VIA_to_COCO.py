@@ -29,10 +29,10 @@ _indexes = [f for f in os.listdir(os.path.join(root_path))]  # _indexes = [f for
 
 def save_jason_in_cocoformat(dataset):
     # 保存结果的文件夹
-    folder = os.path.join(root_path + 'via2coco', 'annotations')
+    folder = os.path.join(root_path + 'VIAtoCOCO', 'annotations')
     if not os.path.exists(folder):
         os.makedirs(folder)
-    json_name = os.path.join(root_path + 'via2coco', 'annotations/{}.json'.format(phase))
+    json_name = os.path.join(root_path + 'VIAtoCOCO', 'annotations/{}.json'.format(phase))
     with open(json_name, 'w') as f:
         json.dump(dataset, f)
 
